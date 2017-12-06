@@ -17,7 +17,8 @@ defmodule Dictionary do
   end
 
   def word_list do
-    "assets/words.txt"
+    "../assets/words.txt"
+    |> Path.expand(__DIR__)
     |> File.read!
     |> String.split(~r/\n/)
   end
@@ -26,8 +27,16 @@ defmodule Dictionary do
     word_list
     |> Enum.random
   end
-
   
+  def swap({a,b}) do
+    {b,a}
+  end
+  def same(a,a) do
+    true
+  end
 
-  
+def same(a,b) do
+  false
+end
+
 end
