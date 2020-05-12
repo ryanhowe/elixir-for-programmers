@@ -4,5 +4,6 @@ defmodule DictionaryTest do
 
   test "greets the world" do
     assert Dictionary.hello() == :world
+    assert Dictionary.hello() == :hello
   end
 end
